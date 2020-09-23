@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30413.136
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SWA.Sample.01", "SWA.Sample.01\SWA.Sample.01.csproj", "{F78F2CF5-CAAF-41BA-9A0B-3D10ADC73762}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SWA.Sample.01", "SWA.Sample.01\SWA.Sample.01.csproj", "{F78F2CF5-CAAF-41BA-9A0B-3D10ADC73762}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SWA.Sample.01.TestableVersion", "SWA.Sample.01.TestableVersion\SWA.Sample.01.TestableVersion.csproj", "{5022DC3B-7ED0-4694-948A-706F25AD7447}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{F78F2CF5-CAAF-41BA-9A0B-3D10ADC73762}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F78F2CF5-CAAF-41BA-9A0B-3D10ADC73762}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F78F2CF5-CAAF-41BA-9A0B-3D10ADC73762}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5022DC3B-7ED0-4694-948A-706F25AD7447}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5022DC3B-7ED0-4694-948A-706F25AD7447}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5022DC3B-7ED0-4694-948A-706F25AD7447}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5022DC3B-7ED0-4694-948A-706F25AD7447}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
