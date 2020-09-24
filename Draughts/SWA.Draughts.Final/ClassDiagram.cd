@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="SWA.Draughts.Final.Board">
+    <Position X="2.5" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAAAAAAAAAACAEAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Board.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Field Name="_stones" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="SWA.Draughts.Final.Program">
+    <Position X="1.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_reader" />
+      <Field Name="_board" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="SWA.Draughts.Final.Input.InputReader">
+    <Position X="3.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAAAAAAIAAAAAAAgAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Input\InputReader.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="LastInput" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="SWA.Draughts.Final.Input.DraughtsInputQuitRequest" Collapsed="true">
+    <Position X="5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Input\DraughtsInputQuitRequest.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SWA.Draughts.Final.Input.DraughtsInputKickRequest" Collapsed="true">
+    <Position X="9.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAYAA=</HashCode>
+      <FileName>Input\DraughtsInputKickRequest.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SWA.Draughts.Final.Input.DraughtsInput" Collapsed="true">
+    <Position X="7.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Input\DraughtsInput.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SWA.Draughts.Final.Input.DraughtsInputMoveRequest" Collapsed="true">
+    <Position X="7.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAgAAAAAIAAAAAAAAAAAQAAA=</HashCode>
+      <FileName>Input\DraughtsInputMoveRequest.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SWA.Draughts.Final.Model.Stone">
+    <Position X="6" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAQAgAAAYAA=</HashCode>
+      <FileName>Model\Stone.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Color" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="SWA.Draughts.Final.Input.DraughtsInputPromoteRequest" Collapsed="true">
+    <Position X="11.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAYAA=</HashCode>
+      <FileName>Input\DraughtsInputPromoteRequest.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="SWA.Draughts.Final.Model.StoneColors">
+    <Position X="9" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\StoneColors.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

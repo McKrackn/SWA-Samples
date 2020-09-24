@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30413.136
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SWA.Draughts", "SWA.Draughts\SWA.Draughts.csproj", "{0ED029A2-9D33-4AE4-AA19-364B2A80CA94}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SWA.Draughts", "SWA.Draughts\SWA.Draughts.csproj", "{0ED029A2-9D33-4AE4-AA19-364B2A80CA94}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SWA.Draughts.Final", "SWA.Draughts.Final\SWA.Draughts.Final.csproj", "{4195EF8F-C53F-4A6E-9E49-FE15B045204D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{0ED029A2-9D33-4AE4-AA19-364B2A80CA94}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0ED029A2-9D33-4AE4-AA19-364B2A80CA94}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0ED029A2-9D33-4AE4-AA19-364B2A80CA94}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4195EF8F-C53F-4A6E-9E49-FE15B045204D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4195EF8F-C53F-4A6E-9E49-FE15B045204D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4195EF8F-C53F-4A6E-9E49-FE15B045204D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4195EF8F-C53F-4A6E-9E49-FE15B045204D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
