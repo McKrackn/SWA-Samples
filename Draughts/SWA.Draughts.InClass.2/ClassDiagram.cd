@@ -11,7 +11,7 @@
   <Class Name="SWA.Draughts.Final.Program">
     <Position X="1.25" Y="3" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAEAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAABCAAAAA=</HashCode>
+      <HashCode>AAEAAAAIAAAAAAAAEAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
       <FileName>Program.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -46,14 +46,14 @@
   <Class Name="SWA.Draughts.Final.Input.DraughtsInput" Collapsed="true">
     <Position X="7.25" Y="4.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Input\DraughtsInput.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SWA.Draughts.Final.Input.DraughtsInputMoveRequest">
     <Position X="7.25" Y="5.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAICAAAAAAAAAAAYAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAYAA=</HashCode>
       <FileName>Input\DraughtsInputMoveRequest.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -75,13 +75,6 @@
       <FileName>Input\DraughtsInputPromoteRequest.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
-  </Class>
-  <Class Name="SWA.Draughts.Final.Input.DraughtsInputNoOperation" Collapsed="true">
-    <Position X="14.75" Y="6" Width="2.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Input\DraughtsInputNoOperation.cs</FileName>
-    </TypeIdentifier>
   </Class>
   <Enum Name="SWA.Draughts.Final.Model.StoneColors">
     <Position X="9" Y="8.75" Width="1.5" />

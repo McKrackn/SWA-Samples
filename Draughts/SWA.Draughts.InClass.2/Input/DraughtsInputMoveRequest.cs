@@ -9,12 +9,12 @@
 
         public override string PrintMyMove()
         {
-            return PrintMyMove(0, 0);
+            return $"{X}/{Y} -> {ToX}/{ToY}";
         }
 
-        public new string PrintMyMove(int deltaX, int deltaY)
+        public string PrintMyMove(int x)
         {
-            return $"{X+deltaX}/{Y+deltaY} -> {ToX+deltaX}/{ToY+deltaY}";
+            return "ok";
         }
     }
 }

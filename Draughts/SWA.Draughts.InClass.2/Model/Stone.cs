@@ -2,7 +2,7 @@
 {
     public class Stone
     {
-        public StoneColors Color { get; private set; }
+        public StoneColors Color { get; set; }
         public int X { get; set; }
         public int Y { get; set; }
         public bool IsQueen { get; set; } = false;

@@ -8,7 +8,7 @@ namespace SWA.Draughts.Final
     public class Board : IDisposable
     {
         // private Stone[] _stones = new Stone[24];
-        private InitializableReadonlyCollection<Stone> _stones = new InitializableReadonlyCollection<Stone>();
+        private List<Stone> _stones = new List<Stone>();
 
         public event EventHandler<EventArgs> BoardHasChanged;
 
@@ -27,8 +27,6 @@ namespace SWA.Draughts.Final
 
                 _stones.Add(new Stone(x, y, color));
             }
-
-            _stones.SetInitializationFinished();
         }
 
         private Stone FindStone(int x, int y)

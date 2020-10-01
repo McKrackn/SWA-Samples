@@ -6,27 +6,27 @@ namespace SWA.Draughts.Final
     class Program
     {
         private static InputReader _reader = new InputReader();
-        public static Board Board { get; set; }
+        private static Board _board;
         static void Main(string[] args)
         {
-            Board = new Board();
+            _board = new Board();
 
             DraughtsInput input = null;
-            Board.BoardHasChanged += BoardOnBoardHasChanged;
+            _board.BoardHasChanged += BoardOnBoardHasChanged;
             
-            Board.Draw();
+            _board.Draw();
             while (!((input = _reader.Read()) is DraughtsInputQuitRequest))
             {
-                Board.ExecuteRequest(input);
+                _board.ExecuteRequest(input);
             }
 
-            Board.Dispose();
-            Board = null;
+            _board.Dispose();
+            _board = null;
         }
 
-        private static void BoardOnBoardHasChanged(object sender, EventArgs e)
+        private static void BoardOnBoardHasChanged(object? sender, EventArgs e)
         {
-            Board.Draw();
+            _board.Draw();
         }
     }
 }
