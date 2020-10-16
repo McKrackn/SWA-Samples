@@ -65,8 +65,14 @@ namespace SWA.Highscores.InClass
             });
 
             // AddCommand = new RelayCommand(new Action<object>(Add)); // long version
-            // AddCommand = new RelayCommand((parameter) => Add(parameter));
-            AddCommand = new RelayCommand(Add, (parameter) => this.Points > 0); // short version
+            // AddCommand = new RelayCommand((parameter) => Add(parameter),
+            //                               (parameter) => this.Points > 0);
+            AddCommand = new RelayCommand(Add, CanAdd); // short version
+        }
+
+        private bool CanAdd(object parameter)
+        {
+            return this.Points > 0;
         }
 
         private void Add(object parameter)
