@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30523.141
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bimaru.SWA.InClass", "Bimaru.SWA.InClass\Bimaru.SWA.InClass.csproj", "{8CDC20E1-4908-4187-A24D-EB276E909B5B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bimaru.SWA.InClass.Test", "Bimaru.SWA.InClass.Test\Bimaru.SWA.InClass.Test.csproj", "{573EBB00-0C7F-496C-B6C6-089213C2DD5C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8CDC20E1-4908-4187-A24D-EB276E909B5B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8CDC20E1-4908-4187-A24D-EB276E909B5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8CDC20E1-4908-4187-A24D-EB276E909B5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8CDC20E1-4908-4187-A24D-EB276E909B5B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{573EBB00-0C7F-496C-B6C6-089213C2DD5C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{573EBB00-0C7F-496C-B6C6-089213C2DD5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{573EBB00-0C7F-496C-B6C6-089213C2DD5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{573EBB00-0C7F-496C-B6C6-089213C2DD5C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1793D6B6-4AFE-4AA5-B97C-50852C87335F}
+	EndGlobalSection
+EndGlobal
