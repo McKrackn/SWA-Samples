@@ -1,0 +1,104 @@
+﻿<Window x:Class="WPFButtonGallery.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFButtonGallery"
+        DataContext="{Binding Main, Source={StaticResource Locator}}"
+        mc:Ignorable="d"
+        Title="Button Gallery" Height="265" Width="552">
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Height" Value="70" />
+            <Setter Property="Margin" Value="5" />
+            <Setter Property="Background" Value="Pink" />
+            <Style.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="50" />
+                </Style>
+            </Style.Resources>
+            <Style.Triggers>
+                <Trigger Property="IsEnabled" Value="True">
+                    <Setter Property="Height" Value="100"></Setter>
+                </Trigger>
+                <DataTrigger Binding="{Binding Height, RelativeSource={RelativeSource Self}}" Value="100">
+                    <Setter Property="FontWeight" Value="ExtraBold"></Setter>
+                </DataTrigger>
+                <DataTrigger Binding="{Binding IsSpecial}" Value="True">
+                    <Setter Property="Foreground" Value="WhiteSmoke" />
+                </DataTrigger>
+                <EventTrigger RoutedEvent="MouseEnter">
+                    <BeginStoryboard>
+                        <Storyboard TargetProperty="Height">
+                            <DoubleAnimation From="100" To="150" Duration="0:0:0.2" />
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+                <EventTrigger RoutedEvent="MouseLeave">
+                    <BeginStoryboard>
+                        <Storyboard TargetProperty="Height">
+                            <DoubleAnimation From="150" To="100" Duration="0:0:1" />
+                        </Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Style.Triggers>
+        </Style>
+        <Style x:Key="SpongeBobStyle" TargetType="Button" BasedOn="{StaticResource {x:Type Button}}">
+            <Setter Property="Background" Value="#FFF463" />
+            <Setter Property="BorderThickness" Value="10"></Setter>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="1*"/>
+        </Grid.RowDefinitions>
+        <Grid Background="Gainsboro">
+            <CheckBox IsChecked="{Binding IsSpecial}" Margin="5" >IsSpecial</CheckBox>
+        </Grid>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+
+            <Button Grid.Column="0" Style="{StaticResource SpongeBobStyle}">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="80"/>
+                    </Style>
+                </Button.Resources>
+
+                <StackPanel>
+                    <TextBlock HorizontalAlignment="Center">Robert</TextBlock>
+                    <TextBlock HorizontalAlignment="Center">SpongeBob</TextBlock>
+                    <TextBlock HorizontalAlignment="Center">Schwammkopf</TextBlock>
+                </StackPanel>
+            </Button>
+
+            <DockPanel Grid.Column="1" VerticalAlignment="Center">
+                <Button DockPanel.Dock="Top" IsEnabled="{Binding IsChecked, ElementName=PatrickStarIsEnabledCheckBox}">
+                    <StackPanel>
+                        <TextBlock HorizontalAlignment="Center">Patrick</TextBlock>
+                        <TextBlock HorizontalAlignment="Center">Star</TextBlock>
+                    </StackPanel>
+                </Button>
+                <CheckBox x:Name="PatrickStarIsEnabledCheckBox" Height="25" DockPanel.Dock="Bottom" IsChecked="False"></CheckBox>
+            </DockPanel>
+
+            <Button Grid.Column="2">
+                <Button.Style>
+                    <Style TargetType="Button" BasedOn="{StaticResource SpongeBobStyle}">
+                        <Setter Property="Background" Value="#B2D8C3" />
+                    </Style>
+                </Button.Style>
+                <StackPanel>
+                    <TextBlock HorizontalAlignment="Center">Thaddäus</TextBlock>
+                    <TextBlock HorizontalAlignment="Center">Quentin</TextBlock>
+                    <TextBlock HorizontalAlignment="Center">Tentakel</TextBlock>
+                </StackPanel>
+            </Button>
+        </Grid>
+    </Grid>
+</Window>
