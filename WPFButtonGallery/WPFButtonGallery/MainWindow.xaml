@@ -2,8 +2,10 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:WPFButtonGallery"
+        xmlns:local="clr-namespace:WPFButtonGallery" 
+        d:DataContext="{d:DesignInstance Type=local:MainViewModelDesign}"
         DataContext="{Binding Main, Source={StaticResource Locator}}"
         mc:Ignorable="d"
         Title="Button Gallery" Height="265" Width="552">
@@ -52,9 +54,12 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="1*"/>
+            <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
         <Grid Background="Gainsboro">
-            <CheckBox IsChecked="{Binding IsSpecial}" Margin="5" >IsSpecial</CheckBox>
+            <CheckBox IsChecked="{Binding IsSpecial}" Margin="5" >
+                <TextBlock Text="IsSpecial" />
+            </CheckBox>
         </Grid>
         <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>
@@ -71,34 +76,40 @@
                 </Button.Resources>
 
                 <StackPanel>
-                    <TextBlock HorizontalAlignment="Center">Robert</TextBlock>
-                    <TextBlock HorizontalAlignment="Center">SpongeBob</TextBlock>
-                    <TextBlock HorizontalAlignment="Center">Schwammkopf</TextBlock>
+                    <TextBlock HorizontalAlignment="Center" Text="Robert" />
+                    <TextBlock HorizontalAlignment="Center" Text="SpongeBob" />
+                    <TextBlock HorizontalAlignment="Center" Text="Schwammkopf" />
                 </StackPanel>
             </Button>
 
             <DockPanel Grid.Column="1" VerticalAlignment="Center">
                 <Button DockPanel.Dock="Top" IsEnabled="{Binding IsChecked, ElementName=PatrickStarIsEnabledCheckBox}">
                     <StackPanel>
-                        <TextBlock HorizontalAlignment="Center">Patrick</TextBlock>
-                        <TextBlock HorizontalAlignment="Center">Star</TextBlock>
+                        <TextBlock HorizontalAlignment="Center" Text="Patrick" />
+                        <TextBlock HorizontalAlignment="Center" Text="Star" />
                     </StackPanel>
                 </Button>
                 <CheckBox x:Name="PatrickStarIsEnabledCheckBox" Height="25" DockPanel.Dock="Bottom" IsChecked="False"></CheckBox>
             </DockPanel>
 
             <Button Grid.Column="2">
+                <i:Interaction.Triggers>
+                    <i:EventTrigger EventName="GotFocus">
+                        <i:InvokeCommandAction Command="{Binding SquidwardTentaclesActivatedCommand}"></i:InvokeCommandAction>
+                    </i:EventTrigger>
+                </i:Interaction.Triggers>
                 <Button.Style>
                     <Style TargetType="Button" BasedOn="{StaticResource SpongeBobStyle}">
                         <Setter Property="Background" Value="#B2D8C3" />
                     </Style>
                 </Button.Style>
                 <StackPanel>
-                    <TextBlock HorizontalAlignment="Center">Thaddäus</TextBlock>
-                    <TextBlock HorizontalAlignment="Center">Quentin</TextBlock>
-                    <TextBlock HorizontalAlignment="Center">Tentakel</TextBlock>
+                    <TextBlock HorizontalAlignment="Center" Text="Thaddäus" />
+                    <TextBlock HorizontalAlignment="Center" Text="Quentin" />
+                    <TextBlock HorizontalAlignment="Center" Text="Tentakel" />
                 </StackPanel>
             </Button>
         </Grid>
+        <Label Grid.Row="2" Content="{Binding State}" Height="25"/>
     </Grid>
 </Window>
