@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Diagnostics;
 using System.Net;
@@ -15,7 +16,7 @@ namespace ReadWebPage
 {
     public class MainViewModel : ViewModelBase
     {
-        public BindingList<string> HeadLines { get; private set; } = new BindingList<string>();
+        public ObservableCollection<string> HeadLines { get; private set; } = new ObservableCollection<string>();
 
         private object _locker = new object();
         private SemaphoreSlim _sem = new SemaphoreSlim(1, 1);
