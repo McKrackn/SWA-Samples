@@ -106,6 +106,10 @@ namespace ReadWebPage
             {
                 // await GetDataAsync(); // does not work, because objects are owned by another thread
 
+                // here an exception will be raised
+                // Status = $"Get Data Async - " + DateTime.Now.ToLongTimeString();
+                // HeadLines.Clear();
+
                 Application.Current.Dispatcher.Invoke(() =>
                 {
                     Status = $"Get Data Async - " + DateTime.Now.ToLongTimeString();
