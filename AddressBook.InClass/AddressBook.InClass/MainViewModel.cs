@@ -15,11 +15,44 @@ namespace AddressBook.InClass
 
         private DispatcherTimer _timer;
 
+        public class DateTimeFormat
+        {
+            public string Name { get; set; }
+            public string Format { get; set; }
+        }
+
+        public List<DateTimeFormat> SupportedFormats
+        {
+            get;
+        } = new List<DateTimeFormat>()
+        {
+            new DateTimeFormat(){Format = "T", Name = "Time with seconds"},
+            new DateTimeFormat(){Format = "t", Name = "Time without seconds"}
+        };
+
+        private DateTimeFormat _selectedDateTimeFormat = null;
+        public DateTimeFormat SelectedDateTimeFormat
+        {
+            get
+            {
+                if (_selectedDateTimeFormat == null)
+                {
+                    _selectedDateTimeFormat = SupportedFormats[0];
+                }
+                return _selectedDateTimeFormat;
+            }
+            set
+            {
+                _selectedDateTimeFormat = value;
+                RaisePropertyChanged(nameof(CurrentTime));
+            }
+        }
+
         public string CurrentTime
         {
             get
             {
-                return DateTime.Now.ToString("T");
+                return DateTime.Now.ToString(SelectedDateTimeFormat.Format);
             }
         }
 

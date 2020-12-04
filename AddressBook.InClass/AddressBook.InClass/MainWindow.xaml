@@ -27,7 +27,12 @@
             <ColumnDefinition Width="171*"/>
             <ColumnDefinition Width="629*"/>
         </Grid.ColumnDefinitions>
-        <Label Content="{Binding CurrentTime}" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <StackPanel>
+            <Label Content="{Binding CurrentTime}" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            <ComboBox ItemsSource="{Binding SupportedFormats}"
+                      SelectedItem="{Binding SelectedDateTimeFormat}"
+                      DisplayMemberPath="Name"></ComboBox>
+        </StackPanel>
         <ListBox Grid.Row="1" Grid.Column="0" Margin="5,5,5,5" ItemsSource="{Binding ContactStore.Contacts}" IsSynchronizedWithCurrentItem="True">
             <ListBox.ItemTemplate>
                 <DataTemplate>
